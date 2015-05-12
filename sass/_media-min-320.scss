@@ -1,0 +1,340 @@
+//-------------------------------------------------
+//					Variables
+//-------------------------------------------------
+$bg-main:#f4f4f4;
+$bg-content:#ffffff;
+
+$text-light:#ffffff;
+$text-mid-soft:#e5e5e5;
+$text-mid-light:#bbbbbb;
+$text-mid:#646464; //normal text
+$text-dark:#373737;
+$text-tagline:#4ca5d0;
+
+$flat-alizarin:#e74c3c;
+$flat-carrot:#e67e22;
+$flat-sun:#f1c40f;
+$flat-emerald:#2ecc71;
+$flat-torquoise:#1abc9c;
+$flat-river:#3498db;
+$flat-amethyst:#9b59b6;
+
+$flat-pomegranate:#c0392b; //dark alizarin
+$flat-pumpkin:#d35400; //dark carrot
+$flat-orange:#f39c12; //dark sun
+$flat-nephritis:#27ae60; //dark emerald
+$flat-greensea:#16a085; //dark turquoise
+$flat-belize:#2980b9; //dark rivver
+$flat-wisteria:#8e44ad; //dark amethyst
+
+$flat-asphalt:#34495e;
+$flat-midnight:#2c3e50; //dark asphalt
+$flat-clouds:#ecf0f1;
+$flat-silver:#bdc3c7; //dark clouds
+$flat-concrete:#95a5a6;
+$flat-asbestos:#7f8c8d; //dark concrete
+
+/****************************************************
+*													*
+*					Web Warrior Portfolio			*
+*						by Israel					*
+*													*
+****************************************************/
+
+/*-------------------------------------------------
+					General
+-------------------------------------------------*/
+
+html{
+	height:100%;
+}
+body{
+	height: 100%;
+	color: $text-mid;
+	font: 14px 'Lato',Tahoma,sans-serif;
+	font-weight: 300;
+	overflow-x: hidden;
+	background: $bg-main;
+}
+a{
+	cursor: pointer;
+	text-decoration: none;
+	&:hover{
+		text-decoration: none;
+		color: inherit; 
+	}
+}
+#page{
+	max-width: 320px;
+	padding-top: 40px;
+	margin-right: auto;
+	margin-left: auto;
+	overflow: hidden;
+}
+*:focus{
+	outline: none;
+}
+.alizarian{
+	background-color: $flat-alizarin;
+}
+.carrot{
+	background-color: $flat-carrot;
+}
+.sun{
+	background-color: $flat-sun;
+}
+.emerald{
+	background-color: $flat-emerald;
+}
+.torquoise{
+	background-color: $flat-torquoise;
+}
+.river{
+	background-color: $flat-river;
+}
+.amethyst{
+	background-color: $flat-amethyst;
+}
+
+.pomegranate{
+	background-color: $flat-pomegranate;
+}
+.pumpkin{
+	background-color: $flat-pumpkin;
+}
+.orange{
+	background-color: $flat-orange;
+}
+.nephritis{
+	background-color: $flat-nephritis;
+}
+.greensea{
+	background-color: $flat-greensea;
+}
+.belize{
+	background-color: $flat-belize;
+}
+.wisteria{
+	background-color: $flat-wisteria;
+}
+
+.asphalt{
+	background-color: $flat-asphalt;
+}
+.midnight{
+	background-color: $flat-midnight;
+}
+.clouds{
+	background-color: $flat-clouds;
+}
+.silver{
+	background-color: $flat-silver;
+}
+.concrete{
+	background-color: $flat-concrete;
+}
+.asbestos{
+	background-color: $flat-asbestos;
+}
+
+/*-------------------------------------------------
+					Layout
+-------------------------------------------------*/
+#page header{
+	text-align: right;
+	font-size: 23px;
+	margin-bottom: 15px;
+	a{
+		margin-left: 15px;
+		color: $text-mid-light;
+		&:hover{
+			color: $text-mid;
+		}
+	}
+}
+#main{
+	background-color: $bg-content;
+}
+.container, .container-fluid{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+section{
+	position: relative;
+	margin-bottom: 40px;
+}
+.totop{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 42px;
+	height: 42px;
+	border: 3px solid $text-mid-soft;
+	padding: 3px;
+	margin: 10px;
+	font-size: 30px;
+	color: $text-mid-soft;
+	@include transition(all linear 0.2s);
+	i.fa{
+		position: relative;
+		top: -6px;
+	}
+	&:hover{
+		color: $text-light;
+		background-color: $text-mid-soft;
+	}
+}
+h1{
+	display: inline-block;
+	position: relative;
+	left: -60px;
+	padding: 20px;
+	padding-left: 80px;
+	margin: 0;
+	margin-bottom: 30px;
+	font-size: 20px;
+	line-height: 20px;
+	text-transform: uppercase;
+	color: $text-light;	
+	i.fa{
+		font-size: 28px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		text-align: center;
+		padding-top: 16px;
+		width: 60px;
+		height: 60px;
+		border-right: 1px solid rgba(255,255,255,0.2);
+	}
+}
+/*-------------------------------------------------
+					Profile
+-------------------------------------------------*/
+#profile{
+	#profile-pic{
+		display: none;
+	}
+	h2{
+		font-size: 25px;
+		color: $text-dark;
+		text-transform: uppercase;
+		position: relative;
+		margin-top: 0;
+		margin-bottom: 20px;
+		span{
+			color: $text-tagline;
+			text-transform: capitalize;
+			font-size: 18px;
+			font-weight: normal;
+			display: block;
+		}
+	}
+	dl{
+		margin: 0;
+		margin-bottom: 30px;
+		dt{
+			font-weight: bold;
+			float: left;
+			width: 85px;
+			text-align: right;
+			margin-right: 10px;
+			margin-bottom: 5px;
+			clear: both;
+		}
+		dd{
+			float: left;
+			margin-bottom: 5px;
+			margin-left: 0;
+			overflow: hidden;
+		}
+	}
+}
+/*-------------------------------------------------
+					Skills
+-------------------------------------------------*/
+#skills{
+	h2{
+		text-transform: uppercase;
+		font-size: 14px;
+		color: $text-dark;
+		margin-bottom: 25px;
+	}
+	.skills-row{
+		margin-bottom: 10px;
+		.caption{
+			font-size: 12px;
+			font-weight: bold;
+			margin-bottom: 4px;
+		}
+		.progressbar{
+			background-color: $bg-main;
+			height: 15px;
+			.progress{
+				height: 15px;
+				border-radius: 0;
+				text-align: right;
+				font-size: 12px;
+				color: $text-light;
+				padding-right: 5px;
+			}
+		}
+		.legend{
+			display: inline-block;
+			margin-right: 7px;
+			width: 9px;
+			height: 9px;
+		}
+	}
+	.label-tag{
+		display: inline-block;
+		background-color: $flat-concrete;
+		padding: 3px 8px;
+		font-size: 12px;
+		color: $text-light;
+		border-radius: 4px;
+		margin-bottom: 7px;
+		margin-right: 3px;
+	}
+}
+/*-------------------------------------------------
+					Work History
+-------------------------------------------------*/
+#history{
+	h2{
+		background-color: $text-dark;
+		color: $text-light;
+		font-size: 14px;
+		.job-icon{
+			padding: 8px;
+			margin-right: 10px;
+		}
+	}
+	h3{
+		color: $text-dark;
+		position: relative;
+		.date{
+			color: $text-mid-light;
+			text-align: left;
+			font-weight: normal;
+		}
+	}
+	.list-title{
+		font-weight: bold;
+		font-size: 18px;
+		.list-icon{
+			color: $text-light;
+			width: 15px;
+			height: 15px;
+			text-align: center;
+			border-radius: 8px;
+			font-size: 12px;
+			line-height: 16px;
+			padding-left: 2px;
+			margin-right: 10px;
+			vertical-align: top;
+			position: relative;
+			top: 4px;
+		}
+	}
+}

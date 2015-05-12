@@ -1,0 +1,34 @@
+@media (min-width: 495px){
+	#page{
+		width: 80%;
+		min-width: 320px;
+		max-width: 960px;
+		padding-left: 60px;
+	}
+	/*-------------------------------------------------
+						Profile
+	-------------------------------------------------*/
+	#profile{
+		#profile-pic{
+			display: inline-block;
+			float: left;
+			margin-right: 10px;
+			margin-bottom: 20px;
+			background: url(../img/profile-pic.png);
+			background-size: contain;
+			border: 4px solid $text-mid-soft;
+			height: 103px;
+			width: 103px;
+		}
+	}
+	/*-------------------------------------------------
+						Work History
+	-------------------------------------------------*/
+	#history{
+		h3{
+			.date{
+				text-align: right;
+			}
+		}
+	}
+}
