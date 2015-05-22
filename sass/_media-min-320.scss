@@ -47,10 +47,10 @@ $flat-asbestos:#7f8c8d; //dark concrete
 @import url(https://fonts.googleapis.com/css?family=Lato:200,300,400,600,700,900);
 
 html{
-	height:100%;
+	min-height:100%;
 }
 body{
-	height: 100%;
+	min-height: 100%;
 	color: $text-mid;
 	font: 14px 'Lato',Tahoma,sans-serif;
 	font-weight: 400;
@@ -163,6 +163,7 @@ a{
 section{
 	position: relative;
 	margin-bottom: 40px;
+	border-top: 1px solid $bg-main;
 }
 .totop{
 	position: absolute;
@@ -273,7 +274,7 @@ h1{
 			height: 15px;
 			.progress{
 				height: 15px;
-				border-radius: 0;
+				@include border-radius(0);
 				text-align: right;
 				font-size: 12px;
 				color: $text-light;
@@ -293,7 +294,7 @@ h1{
 		padding: 3px 8px;
 		font-size: 12px;
 		color: $text-light;
-		border-radius: 4px;
+		@include border-radius(4px);
 		margin-bottom: 7px;
 		margin-right: 3px;
 	}
@@ -332,11 +333,46 @@ h1{
 		width: 15px;
 		height: 15px;
 		text-align: center;
-		border-radius: 50%;
+		@include border-radius(50%);
 		font-size: 12px;
 		line-height: 16px;
 		padding-left: 2px;
 		margin-right: 10px;
 		vertical-align: middle;
+	}
+}
+#contact{
+	label{
+		display: block;
+		margin-bottom: 10px;
+		span{
+			color: $flat-alizarin;
+		}
+	}
+	input[type=text], textarea{
+		@include box-shadow(2px 2px 10px rgba(0,0,0,0.25) inset);
+		border: none;
+		@include border-radius(3px);
+		padding: 10px;
+		background-color:$bg-main;
+		width: 100%;
+	}
+	textarea{
+		resize: none;
+		height: 100px;
+	}
+	form .row{margin-bottom: 20px;}
+	input[type=submit]{
+		padding: 10px 20px;
+		margin-bottom: 30px;
+		border: none;
+		color: $text-light;
+		@include border-radius(3px);
+	}
+	.error{
+		color: $flat-alizarin;
+	}
+	.success{
+		color: $flat-emerald;
 	}
 }
