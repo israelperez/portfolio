@@ -15,28 +15,9 @@ module.exports = function (grunt) {
 					preserveComments: true
 				},
 				files: {
-					'js/calypso-search-bootstrap.min.js': [ 
-						'jscript/MapEngine.js', 
-						'jscript/DealEngine.js', 
-						'jscript/UIEngine-calypso.js', 
-						'jscript/UIEngine-search.js', 
-						'jscript/header.js', 
-						'jscript/vendor/bootstrap.custom.js', 
-						'jscript/vendor/jquery.nanoscroller.js', 
-						'jscript/vendor/plugins.js', 
-						'jscript/vendor/optimize-suite.js'
-					],
-					'js/calypso-search-local-bootstrap.min.js': [ 
-						'jscript/MapEngine.js', 
-						'jscript/DealEngine.js', 
-						'jscript/UIEngine-calypso.js', 
-						'jscript/UIEngine-search.js', 
-						'jscript/UIEngine-local',
-						'jscript/header.js', 
-						'jscript/vendor/bootstrap.custom.js',
-						'jscript/vendor/jquery.nanoscroller.js', 
-						'jscript/vendor/plugins.js', 
-						'jscript/vendor/optimize-suite.js'
+					'js/webwarrior.min.js': [ 
+						'jscript/vendor/file.js'/*, 
+						'jscript/vendor/file2.js',*/
 					]
 				}
 			},
@@ -50,28 +31,9 @@ module.exports = function (grunt) {
 					preserveComments: false
 				},
 				files: {
-					'js/calypso-search-bootstrap.min.js': [ 
-						'jscript/MapEngine.js', 
-						'jscript/DealEngine.js', 
-						'jscript/UIEngine-calypso.js', 
-						'jscript/UIEngine-search.js', 
-						'jscript/header.js', 
-						'jscript/vendor/bootstrap.custom.js', 
-						'jscript/vendor/jquery.nanoscroller.js', 
-						'jscript/vendor/plugins.js', 
-						'jscript/vendor/optimize-suite.js'
-					],
-					'js/calypso-search-local-bootstrap.min.js': [ 
-						'jscript/MapEngine.js', 
-						'jscript/DealEngine.js', 
-						'jscript/UIEngine-calypso.js', 
-						'jscript/UIEngine-search.js', 
-						'jscript/UIEngine-local',
-						'jscript/header.js', 
-						'jscript/vendor/bootstrap.custom.js',
-						'jscript/vendor/jquery.nanoscroller.js', 
-						'jscript/vendor/plugins.js', 
-						'jscript/vendor/optimize-suite.js'
+					'js/webwarrior.min.js': [ 
+						'jscript/vendor/file.js'/*, 
+						'jscript/vendor/file2.js',*/
 					]
 				}
 			}
@@ -120,5 +82,5 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.registerTask('default',['watch']);
-	grunt.registerTask('prod', ['compass:prod','uglify:prod', 's3']);
+	grunt.registerTask('prod', ['compass:prod','uglify:prod']);
 };
