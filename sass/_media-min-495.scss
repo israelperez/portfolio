@@ -24,10 +24,11 @@
 	/*-------------------------------------------------
 						Work History
 	-------------------------------------------------*/
-	#history{
+	#history, #education{
 		h3{
 			.date{
 				text-align: right;
+				padding-left: 0;
 			}
 		}
 	}

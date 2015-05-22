@@ -44,6 +44,7 @@ $flat-asbestos:#7f8c8d; //dark concrete
 /*-------------------------------------------------
 					General
 -------------------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Lato:200,300,400,600,700,900);
 
 html{
 	height:100%;
@@ -52,7 +53,7 @@ body{
 	height: 100%;
 	color: $text-mid;
 	font: 14px 'Lato',Tahoma,sans-serif;
-	font-weight: 300;
+	font-weight: 400;
 	overflow-x: hidden;
 	background: $bg-main;
 }
@@ -243,7 +244,7 @@ h1{
 			clear: both;
 		}
 		dd{
-			float: left;
+			/*float: left;*/
 			margin-bottom: 5px;
 			margin-left: 0;
 			overflow: hidden;
@@ -298,9 +299,9 @@ h1{
 	}
 }
 /*-------------------------------------------------
-					Work History
+					Work History, Education
 -------------------------------------------------*/
-#history{
+#history, #education, #refrence{
 	h2{
 		background-color: $text-dark;
 		color: $text-light;
@@ -321,20 +322,21 @@ h1{
 	}
 	.list-title{
 		font-weight: bold;
-		font-size: 18px;
-		.list-icon{
-			color: $text-light;
-			width: 15px;
-			height: 15px;
-			text-align: center;
-			border-radius: 8px;
-			font-size: 12px;
-			line-height: 16px;
-			padding-left: 2px;
-			margin-right: 10px;
-			vertical-align: top;
-			position: relative;
-			top: 4px;
+		font-size: 16px;
+		span{
+			font-weight: normal;
 		}
+	}
+	.list-icon{
+		color: $text-light;
+		width: 15px;
+		height: 15px;
+		text-align: center;
+		border-radius: 50%;
+		font-size: 12px;
+		line-height: 16px;
+		padding-left: 2px;
+		margin-right: 10px;
+		vertical-align: middle;
 	}
 }
