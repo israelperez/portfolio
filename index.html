@@ -39,7 +39,7 @@
 			<div id="main">
 				<div class="content">
 					<section id="profile">
-						<span class="totop hidden"><i class="fa fa-chevron-up"></i></span>
+						<span class="to-top hidden"><i class="fa fa-chevron-up"></i></span>
 						<h1 class="river">
 							<i class="fa fa-user"></i><span>Profile</span>
 						</h1>
@@ -61,7 +61,7 @@
 										<dt>Phone:</dt>
 										<dd>+4 25 286 273</dd>
 										<dt>Email:</dt>
-										<dd>israel at webwarrior dot me</dd>
+										<dd><a class="to-email">Contact form</a></dd>
 										<dt>CV:</dt>
 										<dd><a href="Israel Perez CV 2015.pdf" target="_blank">Download PDF</a></dd>
 										<dt>linkedin:</dt>
@@ -93,7 +93,7 @@
 						</div>
 					</section>
 					<section id="skills">
-						<a href="#top" class="totop"><i class="fa fa-chevron-up"></i></a>
+						<a class="to-top"><i class="fa fa-chevron-up"></i></a>
 						<h1 class="torquoise">
 							<i class="fa fa-user"></i><span>Skills</span>
 						</h1>
@@ -229,7 +229,7 @@
 						</div>
 					</section>
 					<section id="history">
-						<a href="#top" class="totop"><i class="fa fa-chevron-up"></i></a>
+						<a class="to-top"><i class="fa fa-chevron-up"></i></a>
 						<h1 class="emerald">
 							<i class="fa fa-align-left"></i><span>Work History</span>
 						</h1>
@@ -414,7 +414,7 @@
 						</div>
 					</section>
 					<section id="education">
-						<a href="#top" class="totop"><i class="fa fa-chevron-up"></i></a>
+						<a class="to-top"><i class="fa fa-chevron-up"></i></a>
 						<h1 class="sun">
 							<i class="fa fa-graduation-cap"></i><span>Education</span>
 						</h1>
@@ -494,7 +494,7 @@
 						</div>
 					</section>
 					<section id="refrence">
-						<a href="#top" class="totop"><i class="fa fa-chevron-up"></i></a>
+						<a class="to-top"><i class="fa fa-chevron-up"></i></a>
 						<h1 class="carrot">
 							<i class="fa fa-quote-left"></i><span>Refrence</span>
 						</h1>
@@ -516,34 +516,29 @@
 						</div>
 					</section>
 					<section id="contact">
-						<a href="#top" class="totop"><i class="fa fa-chevron-up"></i></a>
+						<a class="to-top"><i class="fa fa-chevron-up"></i></a>
 						<h1 class="alizarian">
 							<i class="fa fa-envelope"></i><span>Contact</span>
 						</h1>
-						<form class="container-fluid">
+						<form id="frmContact" class="container-fluid">
 							<div class="row">
 								<div class="col-xs-12 col-sm-6">
 									<label>Name <span>*</span></label>
-									<input type="text">
+									<input name='txtName' type="text">
 								</div>
 								<div class="col-xs-12 col-sm-6">
 									<label>Email <span>*</span></label>
-									<input type="text">
+									<input name='txtEmail' type="email">
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-xs-12">
 									<label>Your Message <span>*</span></label>
-									<textarea></textarea>
+									<textarea name="txtMsg"></textarea>
 								</div>
 							</div>
-							<div class="row">
-								<div class="col-xs-12 col-sm-3">
-									<input class="alizarian" type="submit" value="Send">
-								</div>
-								<div class="col-xs-12 col-sm-9 answer">
-									
-								</div>
+								<input class="alizarian" type="submit" value="Send">
+								<div class="form-message"></div>
 							</div>
 						</form>
 					</section>
@@ -554,6 +549,9 @@
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<!--<script src="js/webwarrior.min.js"></script>-->
+		<script src="js/webwarrior.min.js"></script>
+		<script>
+			UIEngine.init();
+		</script>
 	</body>
 </html>

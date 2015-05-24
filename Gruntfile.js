@@ -16,8 +16,8 @@ module.exports = function (grunt) {
 				},
 				files: {
 					'js/webwarrior.min.js': [ 
-						'jscript/vendor/file.js'/*, 
-						'jscript/vendor/file2.js',*/
+						/*'jscripts/vendor/file1.js',*/
+						'jscripts/webwarrior.js'
 					]
 				}
 			},
@@ -32,8 +32,8 @@ module.exports = function (grunt) {
 				},
 				files: {
 					'js/webwarrior.min.js': [ 
-						'jscript/vendor/file.js'/*, 
-						'jscript/vendor/file2.js',*/
+						/*'jscripts/vendor/file1.js',*/
+						'jscripts/webwarrior.js'
 					]
 				}
 			}
@@ -66,10 +66,10 @@ module.exports = function (grunt) {
 		},
 
 		watch: { // https://github.com/gruntjs/grunt-contrib-watch
-			/*scripts: {
-				files: ['scripts/*.js'],
+			scripts: {
+				files: ['jscripts/*.js'],
 				tasks: ['uglify:dev']
-			},*/
+			},
 			compass:{
 				files: ['sass/*.{scss,sass}'],
 				tasks: ['compass:dev']
