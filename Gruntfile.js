@@ -7,7 +7,7 @@ module.exports = function (grunt) {
 		uglify: { // https://github.com/gruntjs/grunt-contrib-uglify
 			dev: {
 				options: {
-					banner: '/* Groupon Search <%= pkg.author %> <%= grunt.template.today("dd-mm-yyyy") %> */\n',
+					banner: '/* Web Warrior <%= pkg.author %> <%= grunt.template.today("dd-mm-yyyy") %> */\n',
 					compress: false, // removes unused code
 					sourceMap: false, // creates source map
 					beautify: true, // prettifies code
@@ -23,7 +23,7 @@ module.exports = function (grunt) {
 			},
 			prod: {
 				options: {
-					banner: '/* Groupon Search <%= pkg.author %> <%= grunt.template.today("dd-mm-yyyy") %> */\n',
+					banner: '/* Web Warrior <%= pkg.author %> <%= grunt.template.today("dd-mm-yyyy") %> */\n',
 					compress: true, // removes unused code
 					sourceMap: true, // creates source map
 					beautify: false, // prettifies code
