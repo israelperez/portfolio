@@ -1,4 +1,5 @@
 <?php
+    header('Content-type: application/json');
 
     // Only process POST reqeusts.
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -34,32 +35,18 @@
         $email_headers .= "From: $name <$email>";
 
         // Send the email.
-        $formStatus = mail($recipient, $subject, $email_content, $email_headers);
-        if ( $formStatus == true ){
-            //http_response_code(200);
-            echo "Thank You! Your message has been sent.";
-            exit;
-        }
-        if ( $formStatus == false ){
-            http_response_code(300);
-            echo "Oops! Something went wrong and we couldn't send your message.";
-            exit;
-        }
-        echo $formStatus;
-        /*if ($formStatus)) {
-            // Set a 200 (okay) response code.
-            http_response_code(200);
-            echo "Thank You! Your message has been sent.";
+        if ( mail($recipient, $subject, $email_content, $email_headers )) {
+            $response_array['status'] = 'success';
+            $response_array['statusText'] = 'Ok';
         } else {
-            // Set a 500 (internal server error) response code.
-            http_response_code(500);
-            echo "Oops! Something went wrong and we couldn't send your message.";
-        }*/
-
+            $response_array['status'] = 'error';
+            $response_array['statusText'] = 'Mail function failed';
+        }
     } else {
-        // Not a POST request, set a 403 (forbidden) response code.
-        http_response_code(403);
-        echo "There was a problem with your submission, please try again.";
+        // Not a POST request
+        $response_array['status'] = 'error';
+        $response_array['statusText'] = 'Wrong method used: Must be Post';
     }
-
+    // return a Json Obeject
+    echo json_encode($response_array);
 ?>
