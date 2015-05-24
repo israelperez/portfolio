@@ -20,11 +20,8 @@ var UIEngine = {
 			var isValid = false;
 			isValid = Engine._validateContact();
 			if(isValid){
-				console.log('form valid. send email');
-				Engine._formElements.form[0].reset();
 				Engine._sendEmail();
-			}else{
-				console.log('form invalid. reject email');
+				Engine._formElements.formMsg.html('Sending...');
 			}
 			e.preventDefault();
 		});
@@ -35,10 +32,11 @@ var UIEngine = {
 
 		$.ajax({
 		    type: 'POST',
-		    url: sendEmail.php,
+		    url: 'sendEmail.php',
 		    data: formData
 		}).done(function(response){
 			Engine._formElements.formMsg.removeClass('error').addClass('success').html(response);
+			Engine._formElements.form[0].reset();
 		}).fail(function(data){
 			var errorMsg = '';
 
@@ -97,10 +95,10 @@ var UIEngine = {
 		}else Engine._formElements.msg.removeClass('error');
 
 		if(!isValidForm){
-			Engine._formElements.formMsg.addClass('error').html(errString);
+			Engine._formElements.formMsg.addClass('error').removeClass('success').html(errString);
 			return false;
 		}else{
-			Engine._formElements.formMsg.removeClass('error').html('');
+			Engine._formElements.formMsg.removeClass('error success').html('');
 			return true;
 		}
 	}

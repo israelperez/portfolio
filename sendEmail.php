@@ -21,7 +21,7 @@
         $recipient = "israel@webwarrior.me";
 
         // Set the email subject.
-        $subject = "New contact from $name";
+        $subject = "New WebWarrior contact: $name";
 
         // Build the email content.
         $email_content = "Name: $name\n";
@@ -29,10 +29,24 @@
         $email_content .= "Message:\n$message\n";
 
         // Build the email headers.
-        $email_headers = "From: $name <$email>";
+        $email_headers = "MIME-Version: 1.0"."\r\n";
+        $email_headers .= "Content-type:text/html;charset=UTF-8"."\r\n";
+        $email_headers .= "From: $name <$email>";
 
         // Send the email.
-        if (mail($recipient, $subject, $email_content, $email_headers)) {
+        $formStatus = mail($recipient, $subject, $email_content, $email_headers);
+        if ( $formStatus == true ){
+            //http_response_code(200);
+            echo "Thank You! Your message has been sent.";
+            exit;
+        }
+        if ( $formStatus == false ){
+            http_response_code(300);
+            echo "Oops! Something went wrong and we couldn't send your message.";
+            exit;
+        }
+        echo $formStatus;
+        /*if ($formStatus)) {
             // Set a 200 (okay) response code.
             http_response_code(200);
             echo "Thank You! Your message has been sent.";
@@ -40,7 +54,7 @@
             // Set a 500 (internal server error) response code.
             http_response_code(500);
             echo "Oops! Something went wrong and we couldn't send your message.";
-        }
+        }*/
 
     } else {
         // Not a POST request, set a 403 (forbidden) response code.
